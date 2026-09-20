@@ -311,7 +311,7 @@ export const DashboardPage = () => {
               </Button>
 
               <div className="mt-2.5 flex items-center justify-between text-[11px] text-slate-400 px-1">
-                <span>Single-Pass Groq LLaMA 3.1 70B batch synthesis</span>
+                <span>Single-Pass Groq LLaMA 3.3 70B batch synthesis</span>
                 <span>Zero-Token deterministic fact validation</span>
               </div>
             </div>

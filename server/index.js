@@ -9,6 +9,7 @@ const startServer = async () => {
   const server = app.listen(env.PORT, () => {
     logger.info(`🚀 ContentForge AI server running in [${env.NODE_ENV}] mode on port ${env.PORT}`);
     logger.info(`👉 API Base: http://localhost:${env.PORT}/api/v1`);
+    console.log('server running')
   });
 
   const handleShutdown = (signal) => {

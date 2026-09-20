@@ -8,7 +8,8 @@ export const useSSE = (transformationId, onEvent, enabled = true) => {
   useEffect(() => {
     if (!transformationId || !enabled) return;
 
-    const sseUrl = `/api/v1/transformations/${transformationId}/progress`;
+    const baseURL = import.meta.env.VITE_API_URL || '';
+    const sseUrl = `${baseURL}/api/v1/transformations/${transformationId}/progress`;
     const eventSource = new EventSource(sseUrl, { withCredentials: true });
     eventSourceRef.current = eventSource;
 

@@ -80,7 +80,7 @@ export const Sidebar = () => {
         </div>
         <div className="flex items-center gap-2 text-slate-300 font-medium">
           <Zap className="w-4 h-4 text-amber-400" />
-          <span>Groq LLaMA 3.1 70B</span>
+          <span>Groq LLaMA 3.3 70B</span>
         </div>
         <p className="text-[11px] text-slate-400 leading-relaxed">
           Zero-distortion single model transformation with deterministic checks.

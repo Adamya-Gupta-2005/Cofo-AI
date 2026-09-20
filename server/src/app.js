@@ -72,9 +72,33 @@ app.use(cookieParser());
 // Apply General Rate Limiter to all API routes
 app.use('/api/v1', generalLimiter);
 
-// Health check endpoint
+// Health check & Base API endpoints
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'ContentForge AI Backend API is operational',
+    version: '1.0.0',
+    documentation: '/api/v1',
+    timestamp: new Date().toISOString(),
+  });
+});
+
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+app.get('/api/v1', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'ContentForge AI API v1',
+    endpoints: {
+      auth: '/api/v1/auth',
+      sources: '/api/v1/sources',
+      transformations: '/api/v1/transformations',
+      outputs: '/api/v1/outputs',
+    },
+    timestamp: new Date().toISOString(),
+  });
 });
 
 // Register API Routes

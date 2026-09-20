@@ -18,7 +18,7 @@ export const GenerationProgress = ({ progress }) => {
     {
       id: 'generating',
       label: 'Generating Multi-Format Outputs',
-      description: 'Single-pass Groq LLaMA 3.1 70B parallel synthesis',
+      description: 'Single-pass Groq LLaMA 3.3 70B parallel synthesis',
     },
     {
       id: 'validating',
